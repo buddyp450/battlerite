@@ -8,6 +8,7 @@ const defaults = {
   region: 'global',
   statusUrl: 'https://api.dc01.gamelockerapp.com/status',
   // title: 'semc-vainglory', // old - was used for Vainglory, not sure if still needed?
+  title: 'battlerite-buddyp450',
 };
 
 export default class Http {
@@ -21,7 +22,7 @@ export default class Http {
       headers: {
         'Content-Encoding': 'gzip',
         'Content-Type': 'application/json',
-        'User-Agent': 'js/vainglory',
+        'User-Agent': 'js/battlerite',
         Accept: 'application/vnd.api+json',
         Authorization: `Bearer ${apiKey}`,
         'X-TITLE-ID': requestOptions.title,
