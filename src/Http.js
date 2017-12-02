@@ -7,7 +7,7 @@ const defaults = {
   host: 'https://api.dc01.gamelockerapp.com/shards/',
   region: 'na',
   statusUrl: 'https://api.dc01.gamelockerapp.com/status',
-  title: 'semc-vainglory',
+  // title: 'semc-vainglory', // old - was used for Vainglory, not sure if still needed?
 };
 
 export default class Http {
