@@ -1,21 +1,19 @@
-# Vainglory.js
+# Battlerite.js
 
-[![Build Status](https://travis-ci.org/seripap/vainglory.svg?branch=master)](https://travis-ci.org/seripap/vainglory) [![npm](https://img.shields.io/npm/v/vainglory.svg)](https://www.npmjs.com/package/vainglory)
-
-This is a Javascript API client wrapper for [Vainglory](http://vainglorygame.com). If you run into problems or find bugs, [file an issue](https://github.com/seripap/vainglory/issues).
+This is a Javascript API client wrapper for [Battlerite](http://battlerite.com). If you run into problems or find bugs, [file an issue](https://github.com/buddyp450/battlerite/issues).
 
 ## Installation
 
 ```
-$ yarn add vainglory
-# or npm install vainglory
+$ yarn add battlerite
+# or npm install battlerite
 ```
 
 To initalize the library
 
 ```javascript
-import Vainglory from 'vainglory';
-const vainglory = new Vainglory('api-key');
+import Battlerite from 'battlerite';
+const battlerite = new Battlerite('api-key');
 ```
 
 <a name="options" />
@@ -27,28 +25,28 @@ Base options can be modified by passing an object during initalization.
 __Properties__
 - `host` [*String*] - HTTP Url to call
 - `title` [*String*] - X-TITLE-ID modifier
-- `region` [*String*] - Region of which game data to request (`na`, `eu`, `sa`, `ea`, `sg`) [Reference](https://developer.vainglorygame.com/docs#regions)
+- `region` [*String*] - (NOT USED - only for Vainglory - all Battlerite Game Data Service data is on the "global" region shard) Region of which game data to request (`na`, `eu`, `sa`, `ea`, `sg`) [Reference](https://developer.vainglorygame.com/docs#regions)
 
 ```javascript
-import Vainglory from 'vainglory';
+import Battlerite from 'battlerite';
 
 // Defaults
 const options = {
   host: 'https://api.dc01.gamelockerapp.com/shards/',
-  region: 'na',
-  title: 'semc-vainglory',
+  region: 'global', // only valid region currently
+  title: 'semc-vainglory', // not required <?> TODO: fix defaults
 };
 
-const vainglory = new Vainglory('api-key', options);
+const battlerite = new Battlerite('api-key', options);
 ```
 
 <a name="documentation" />
 
 ## Documentation
 
-### Reference
+### Reference (previously for Vainglory, updating for Battlerite SOON, all docs here are for Vainglory - there may be overlap)
 
-All methods are named references from the [Official API Reference](http://developer.vainglorygame.com/docs). All methods will return a promise.
+All methods are named references from the [Official API Reference](http://battlerite-docs.readthedocs.io/en/master/). All methods will return a promise.
 
 * [`Errors`](#errors)
 * [`RateLimits`](#rateLimits)
@@ -99,15 +97,15 @@ __Example__
         'User-Agent': 'js/vainglory',
         Accept: 'application/vnd.api+json',
         Authorization: 'Bearer aaa.bbb.ccc',
-        'X-TITLE-ID': 'semc-vainglory' 
-      } 
-    } 
+        'X-TITLE-ID': 'semc-vainglory'
+      }
+    }
   },
   rateLimit:
     { limit: '10',
       remaining: '9',
       reset: '6000000000',
-      requestId: 'some-arbitrary-id' } 
+      requestId: 'some-arbitrary-id' }
     }
 ```
 
@@ -122,7 +120,7 @@ Rate limit information is attached to every request. All models will return `.ra
     { limit: '10',
       remaining: '9',
       reset: '6000000000',
-      requestId: 'some-arbitrary-id' } 
+      requestId: 'some-arbitrary-id' }
     }
 ```
 
@@ -169,7 +167,7 @@ vainglory.status().then((info) => console.log(info));
 __Example Response__
 
 ```
-{ 
+{
   id: 'gamelocker', // From server
   releasedAt: '2017-02-24T20:44:05Z', // From server
   version: 'gamelockerd-v4.0.2', // From server
@@ -200,7 +198,7 @@ vainglory.players... // data from the region that was initialized (defaults to n
 Sets the region for the instance.
 
 ```javascript
-vainglory.setRegion('sg'); // Overwrites parent 
+vainglory.setRegion('sg'); // Overwrites parent
 vainglory.matches... // will return data from `sg` region
 vainglory.players... // will return data from `sg` region
 ```
@@ -224,7 +222,7 @@ const roster = new vainglory.models.roster({data: ...roster});
 ---------------------------------------
 ## Matches
 
-`vainglory.matches` 
+`vainglory.matches`
 
 <a name="matchesCollection" />
 
@@ -300,7 +298,7 @@ vainglory.matches.single(matchId).then((match) => {
 
 ## Players
 
-`vainglory.players` 
+`vainglory.players`
 
 <a name="playersId" />
 
@@ -357,7 +355,7 @@ vainglory.players.getByName(playerNames).then((players) => {
 
 ## Tournament
 
-`vainglory.tournament` 
+`vainglory.tournament`
 
 <a name="tournament" />
 
