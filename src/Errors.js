@@ -1,4 +1,4 @@
-export const RATE_LIMIT = 'Request rate limited. Free for non-commercial use for up to 10 requests per minute! To increase your rate limit, please contact api@superevilmegacorp.com';
+export const RATE_LIMIT = 'Please note: The default rate limit is 10 requests per minute for testing/development purposes! To increase your rate limit, log into your admin dashboard, find the app you would like a higher rate limit for, and click “request a higher rate limit”';
 export const UNAUTHORIZED = 'Unauthorized Access. invalid API key provided.';
 export const UNKNOWN = 'Unknown error, please check your request and try again.';
 export const INTERNAL = 'Internal Server Error.';
