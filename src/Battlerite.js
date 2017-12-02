@@ -2,7 +2,7 @@ import Api from './api';
 import Http from './Http';
 import Utils from './Utils';
 
-class Vainglory {
+class Battlerite {
   constructor(apiKey = null, options = {}) {
     if (!apiKey) {
       throw new Error('Missing API Key.');
@@ -15,4 +15,4 @@ class Vainglory {
 
 }
 
-module.exports = Vainglory;
+module.exports = Battlerite;

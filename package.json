@@ -1,7 +1,7 @@
 {
-  "name": "vainglory",
-  "version": "1.3.5",
-  "description": "A Javascript API Client for Vainglory.",
+  "name": "battlerite",
+  "version": "1.0.0",
+  "description": "A Javascript API Client for Battlerite.",
   "main": "dist/index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint index.js src/**",
@@ -12,20 +12,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seripap/vainglory.git"
+    "url": "git+https://github.com/buddyp450/vainglory.git"
   },
   "keywords": [
-    "vainglory",
+    "battlerite",
     "client",
     "api",
     "game"
   ],
-  "author": "Daniel Seripap",
+  "author": "Buddy Patton <buddyp450@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/seripap/vainglory/issues"
+    "url": "https://github.com/buddyp450/battlerite/issues"
   },
-  "homepage": "https://github.com/seripap/vainglory#readme",
+  "homepage": "https://github.com/buddyp450/battlerite#readme",
   "dependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
