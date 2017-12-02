@@ -34,7 +34,7 @@ var ENDPOINT_PREFIX = 'matches';
 
 exports.default = function (http) {
   var single = function () {
-    var _ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee(matchId) {
+    var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(matchId) {
       var endpoint, response, errors, messages, model;
       return _regenerator2.default.wrap(function _callee$(_context) {
         while (1) {
@@ -98,7 +98,7 @@ exports.default = function (http) {
   }();
 
   var collection = function () {
-    var _ref2 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee2() {
+    var _ref2 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee2() {
       var collectionOptions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
       var now, minus28Days, defaults, query, response, errors, messages, model;
       return _regenerator2.default.wrap(function _callee2$(_context2) {
