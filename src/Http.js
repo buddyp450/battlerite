@@ -5,7 +5,7 @@ import { RATE_LIMIT, UNAUTHORIZED, UNKNOWN, NOT_FOUND, INTERNAL, NO_BODY, OFFLIN
 
 const defaults = {
   host: 'https://api.dc01.gamelockerapp.com/shards/',
-  region: 'na',
+  region: 'global',
   statusUrl: 'https://api.dc01.gamelockerapp.com/status',
   // title: 'semc-vainglory', // old - was used for Vainglory, not sure if still needed?
 };
